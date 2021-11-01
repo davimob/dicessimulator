@@ -1,1 +1,1 @@
-# dicessimulator
+# dices_simulator
