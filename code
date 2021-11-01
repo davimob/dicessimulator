@@ -1,11 +1,19 @@
 from random import randint
 print("Let's play dices")
-comp = randint(1, 6)
-player = int(input('Enter a number between 1 and 6: '))
-if comp == player:
-    print(f'Congratulations, you are right!\nYou play {player} and the computer play {comp}')
-elif comp < player:
-    print(f"You kicked up, it's less\nYou play {player} and the computer play {comp}")
-elif comp > player:
-    print(f"You kicked low, it's more\nYou play {player} and the computer play {comp}")
+while True:
+    comp = randint(1, 6)
+    player = int(input('Enter a number between 1 to 6: '))
+    if comp == player:
+        print(f'Congratulations, you are right!\nYou play {player} and the computer play {comp}')
+    elif comp < player:
+        print(f"You kicked up, it's less\nYou play {player} and the computer play {comp}")
+    elif comp > player:
+        print(f"You kicked low, it's more\nYou play {player} and the computer play {comp}")
+
+    r = str(input('Do you wanna continue? [Y/N]')).upper().strip()
+    while r not in 'YN':
+        r = str(input('Do you wanna continue? [Y/N]')).upper().strip()
+    if r in 'N':
+        break
+
 print('Game over')
